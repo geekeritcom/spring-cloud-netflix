@@ -83,6 +83,7 @@ public class RibbonLoadBalancerClient implements LoadBalancerClient {
 
 	@Override
 	public <T> T execute(String serviceId, LoadBalancerRequest<T> request) throws IOException {
+		// 获取负载均衡器
 		ILoadBalancer loadBalancer = getLoadBalancer(serviceId);
 		Server server = getServer(loadBalancer);
 		if (server == null) {
@@ -148,6 +149,7 @@ public class RibbonLoadBalancerClient implements LoadBalancerClient {
 		if (loadBalancer == null) {
 			return null;
 		}
+		// 通过负载均衡器从服务器列表中选择出一台服务
 		return loadBalancer.chooseServer("default"); // TODO: better handling of key
 	}
 
