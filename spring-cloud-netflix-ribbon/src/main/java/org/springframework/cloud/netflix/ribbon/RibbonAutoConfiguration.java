@@ -74,6 +74,7 @@ public class RibbonAutoConfiguration {
 
 	@Bean
 	public SpringClientFactory springClientFactory() {
+		// 创建客户端工厂，涉及到ribbon默认组件的封装
 		SpringClientFactory factory = new SpringClientFactory();
 		factory.setConfigurations(this.configurations);
 		return factory;

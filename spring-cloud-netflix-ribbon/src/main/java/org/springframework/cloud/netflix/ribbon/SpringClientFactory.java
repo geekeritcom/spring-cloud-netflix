@@ -30,6 +30,8 @@ import com.netflix.loadbalancer.ILoadBalancer;
  * creates a Spring ApplicationContext per client name, and extracts the beans that it
  * needs from there.
  *
+ * 为每个服务创建一个独立的spring的容器
+ *
  * @author Spencer Gibb
  * @author Dave Syer
  */
