@@ -108,6 +108,12 @@ public class RibbonClientConfiguration {
 		return new DummyPing();
 	}
 
+
+	/**
+	 * 初始化server list
+	 * @param config
+	 * @return
+	 */
 	@Bean
 	@ConditionalOnMissingBean
 	@SuppressWarnings("unchecked")
